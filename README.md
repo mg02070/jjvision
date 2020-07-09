@@ -36,3 +36,53 @@ sudo service influxdb start
 ```
 확인 : show databases
 ```
+  ## 1.Repository의 GPS key를 더하기
+  ```
+  curl https://bintray.com/user/downloadSubjectPublicKey?username=bintray | sudo apt-key add -
+  ```
+  
+  ## 2.Repository를 더하기
+  ```
+  echo "deb https://dl.bintray.com/fg2it/deb stretch main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+  ```
+  
+  ## 3.프로그램 설치
+  ```
+  sudo apt update
+  sudo apt install grafana
+  ````
+  ## 4.프로그램 실행
+```
+sudo service influxdb start
+```
+  ### Git Hub Use
+    - Repository down load
+  ```
+  git clone https://github.com/<username>/<repository name>
+  ```
+  ### vim editor setting
+  ```
+  set nu                // Line number
+  set cindent          // C language indent
+  set ts=4            // tab size 4
+  if has("syntax")   // syntax on
+      syntax on
+  endif
+  ```
+  ## 실행
+  ```
+  #!/usr/bin/python
+  
+  import time
+  import RPi.GPIO as GPIO
+  import requests,json
+  from influxdb import InfluxDBClient as influxdb
+  
+  GPIO.setmode(GPIO.BCM)
+  GPIO.setup(4, GPIO.IN)
+  
+  def interrupt_fired(ch)
+  
+  
+  
+  git 
