@@ -68,21 +68,57 @@ sudo service influxdb start
   if has("syntax")   // syntax on
       syntax on
   endif
-  ```
-  ## 실행
-  ```
-  #!/usr/bin/python
+  ```  
   
-  import time
-  import RPi.GPIO as GPIO
-  import requests,json
-  from influxdb import InfluxDBClient as influxdb
-  
-  GPIO.setmode(GPIO.BCM)
-  GPIO.setup(4, GPIO.IN)
-  
-  def interrupt_fired(ch)
-  
-  
-  
-  git 
+   ## VNC 서버
+   ```
+   vncserver
+   ```
+   ## 라즈베리 설정
+   ```
+   sudo raspi-config
+   ```
+   ## 뒤로가기
+   ```
+   cd ..
+   ```
+   ## 폴더 들어가기
+   ```
+   cd 폴더이름
+   ```
+   ## 현재 경로 파일 리스트
+   ```
+   ls
+   ```
+   ## 현재 경로 파일 리스트 및 권한, 크기, 날짜
+   ```
+   ls -al
+   ```
+   ## 직전에 있던 폴더 가는 방법
+   ```
+   cd -
+   ```
+   ## 현재 디렉토리
+   ```
+   ./
+   ```
+   ## 파일 복사
+   ```
+   cp 복사할파일 복사할위치
+   ```
+   ## 파일 삭제
+   ```
+   rm 삭제할 파일 -rf
+   ```
+   ## 리눅스 사용방법 기초
+   ```
+   bin   // 실행 파일 모음
+   tmp   // 임시파일
+   home  // user 폴더
+   sbin  // 시스템 관리용 실행 파일
+   usr   // 각종 프로그램
+   root  // root home 디렉토리
+   var   // 로그, 시스템 운영중 갱신데이터 저장
+   lib   // 각종 라이브러리 설치되는 폴더
+   
+   
