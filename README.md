@@ -120,8 +120,8 @@ sudo service influxdb start
    root  // root home 디렉토리
    var   // 로그, 시스템 운영중 갱신데이터 저장
    lib   // 각종 라이브러리 설치되는 폴더
-   
-   ## 재부팅
+   ```
+  ## 재부팅
    ```
    sudo reboot
    ```
@@ -129,3 +129,38 @@ sudo service influxdb start
    ```
    Bluetooth disable
    ```
+  ## 이산화탄소
+  ```
+  #!/usr/bin/python
+  
+  import sys, serial, time
+  
+  comm = '/dev/ttyAMA0'
+  baudrate = 38400
+  
+  device = serial.Serial(comm, baudrate, timeout = 5)
+  print(device)
+  
+  while(True):
+      try:
+          rcvBuf = bytearray()
+          device.reset_input_buffer()
+          rcvBuf = device.read_until(size=12)
+          print rcvBuf
+      except Exception as e:
+          print("Exception read") + str(e)
+          
+      time.sleep(5)
+  ```
+  ##타임봇
+  ```
+  vim timerbot.py
+  ```
+  ##python3 upgrade
+  ```
+  pip3 install python-telegram-bot --upgrade
+  ```   
+  ## telegrame-bot
+  ```
+  git clone https://github.com/python-telegram-bot/python-telegram-bot --recursive
+  ```
