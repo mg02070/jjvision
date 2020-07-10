@@ -121,3 +121,11 @@ sudo service influxdb start
    var   // 로그, 시스템 운영중 갱신데이터 저장
    lib   // 각종 라이브러리 설치되는 폴더
    
+   ## 재부팅
+   ```
+   sudo reboot
+   ```
+   ## 라즈베리파이 설정 변경 - Bluetooth disable
+   ```
+   Bluetooth disable
+   ```
