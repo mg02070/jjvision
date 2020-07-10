@@ -121,4 +121,3 @@ sudo service influxdb start
    var   // 로그, 시스템 운영중 갱신데이터 저장
    lib   // 각종 라이브러리 설치되는 폴더
    
-   
